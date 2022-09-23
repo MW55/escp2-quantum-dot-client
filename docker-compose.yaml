@@ -1,0 +1,10 @@
+version: '3'
+services:
+  qdots:
+    build: .
+    restart: on-failure
+    ports:
+      - 8888:8888
+    volumes:
+      - /srv/docker/escp2-client/output:/app/output
+      - /srv/docker/escp2-client/notebooks:/opt/notebooks
